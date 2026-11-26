@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a car | Laneway Car Hire</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/booking.js" defer></script>
+</head>
+<body data-page="booking">
+  <div id="site-header"></div>
+  <main id="main">
+    <div class="page-head">
+      <div class="wrap">
+        <h1>Book a car</h1>
+        <p>Fill in your details and we'll confirm by email and SMS within the hour.</p>
+      </div>
+    </div>
+
+    <div class="wrap booking">
+      <form id="booking-form" novalidate>
+        <fieldset>
+          <legend>Car and dates</legend>
+          <div class="field">
+            <label for="car">Car</label>
+            <select id="car" name="car" required></select>
+            <span class="error" data-for="car"></span>
+          </div>
+          <div class="field">
+            <label for="location">Pickup branch</label>
+            <select id="location" name="location" required></select>
+          </div>
+          <div class="row-2">
+            <div class="field">
+              <label for="from">Pickup date</label>
+              <input type="date" id="from" name="from" required>
+              <span class="error" data-for="from"></span>
+            </div>
+            <div class="field">
+              <label for="to">Return date</label>
+              <input type="date" id="to" name="to" required>
+              <span class="error" data-for="to"></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your details</legend>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <span class="error" data-for="name"></span>
+          </div>
+          <div class="row-2">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <span class="error" data-for="email"></span>
+            </div>
+            <div class="field">
+              <label for="phone">Mobile number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="082 123 4567" required>
+              <span class="error" data-for="phone"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="age">Driver's age</label>
+            <input type="number" id="age" name="age" min="18" max="99" required style="max-width:140px">
+            <span class="hint">Drivers aged 21 to 24 pay a young-driver fee of R95 per day.</span>
+            <span class="error" data-for="age"></span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Extras</legend>
+          <div id="extras"></div>
+          <div class="field" style="margin-top:.5rem">
+            <label for="notes">Anything we should know? <span class="muted">(optional)</span></label>
+            <textarea id="notes" name="notes" rows="3" maxlength="400" placeholder="Flight number, late arrival, etc."></textarea>
+          </div>
+        </fieldset>
+
+        <label class="check"><input type="checkbox" id="terms" name="terms" required> <span>I have a valid driver's licence and accept the <a href="#" onclick="return false">rental terms</a>.</span></label>
+        <p class="error" data-for="terms"></p>
+        <button class="btn btn-primary" type="submit" style="margin-top:.75rem;font-size:1.1rem;padding:1rem 2rem">Send booking request</button>
+      </form>
+
+      <aside class="summary" aria-live="polite" aria-label="Booking summary" id="summary"></aside>
+    </div>
+  </main>
+
+  <div class="modal" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="modal-box">
+      <h2 id="confirm-title">Booking received</h2>
+      <p>Your reference number is</p>
+      <div class="ref-code" id="ref-code"></div>
+      <p id="confirm-text"></p>
+      <div class="modal-actions">
+        <a class="btn btn-dark" href="bookings.html">View my bookings</a>
+        <a class="btn btn-ghost" href="cars.html">Browse more cars</a>
+      </div>
+    </div>
+  </div>
+  <div id="site-footer"></div>
+</body>
+</html>

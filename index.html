@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laneway Car Hire | Rent a car in Johannesburg, Cape Town and Durban</title>
+  <meta name="description" content="Rent economy cars, SUVs, bakkies and luxury cars from five Laneway branches. Unlimited kilometres, free cancellation up to 24 hours before pickup.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <h1 id="hero-title">Land, collect your keys, drive off.</h1>
+          <p class="lead">Laneway rents economy cars, SUVs, bakkies and luxury cars from five branches in Johannesburg, Cape Town and Durban. Every booking includes unlimited kilometres.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="cars.html">Browse all cars</a>
+            <a class="btn btn-ghost" href="#how">How renting works</a>
+          </div>
+        </div>
+        <form class="quick-search" id="quick-search" novalidate>
+          <h2>Find a car</h2>
+          <div class="field">
+            <label for="qs-location">Pickup branch</label>
+            <select id="qs-location" name="location"></select>
+          </div>
+          <div class="row-2">
+            <div class="field"><label for="qs-from">Pickup date</label><input type="date" id="qs-from" name="from" required></div>
+            <div class="field"><label for="qs-to">Return date</label><input type="date" id="qs-to" name="to" required></div>
+          </div>
+          <div class="field">
+            <label for="qs-cat">Type of car</label>
+            <select id="qs-cat" name="category"><option value="">Any type</option></select>
+          </div>
+          <p class="error" id="qs-error" role="alert"></p>
+          <button class="btn btn-dark btn-block" type="submit">Show available cars</button>
+        </form>
+      </div>
+      <div class="road" aria-hidden="true"><img src="assets/cars/toyota-corolla.svg" alt=""></div>
+    </section>
+
+    <section aria-labelledby="about-title">
+      <div class="wrap intro">
+        <div>
+          <h2 id="about-title">A local car hire company, not a call centre</h2>
+          <p>We started Laneway in 2016 with eight cars at O.R. Tambo. Today we run a fleet of more than 400 vehicles, and every branch is staffed by people who live in that city and can tell you which road to avoid on a Friday afternoon.</p>
+          <p>Prices are shown with VAT included. The deposit is held on your card, never charged, and released the day you return the car.</p>
+          <a class="btn btn-ghost" href="cars.html">See the fleet</a>
+        </div>
+        <div class="facts">
+          <div class="fact"><strong>400+</strong><span>cars, none older than two years</span></div>
+          <div class="fact"><strong>5</strong><span>branches in three cities</span></div>
+          <div class="fact"><strong>15 min</strong><span>average time from counter to car</span></div>
+          <div class="fact"><strong>24 h</strong><span>free cancellation before pickup</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="featured-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="featured-title">Popular this month</h2>
+            <p>The cars our customers book most often.</p>
+          </div>
+          <a class="btn btn-ghost" href="cars.html">View all cars</a>
+        </div>
+        <div class="car-grid" id="featured"></div>
+      </div>
+    </section>
+
+    <section id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <h2 id="how-title">How renting works</h2>
+        <ol class="steps">
+          <li><h3>Choose a car and dates</h3><p>Pick a branch, your dates and a car. The price you see is the price you pay.</p></li>
+          <li><h3>Send your booking</h3><p>Fill in your details. We confirm by email and SMS within the hour.</p></li>
+          <li><h3>Collect and drive</h3><p>Bring your driver's licence and the card you booked with. The car is washed, fuelled and waiting.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band" id="locations" aria-labelledby="loc-title">
+      <div class="wrap">
+        <h2 id="loc-title">Where to find us</h2>
+        <div class="locations" id="location-list"></div>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <div class="wrap">
+        <h2>Heading out this weekend? Book before Thursday for the best price.</h2>
+        <a class="btn btn-dark" href="booking.html">Book a car</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

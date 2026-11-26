@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our cars | Laneway Car Hire</title>
+  <meta name="description" content="Search and filter every car in the Laneway fleet by type, fuel, seats and daily price.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/cars.js" defer></script>
+</head>
+<body data-page="cars">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="wrap">
+        <h1>Our cars</h1>
+        <p id="trip-line">Every car comes with unlimited kilometres and basic insurance.</p>
+      </div>
+    </div>
+
+    <div class="wrap listing">
+      <aside class="filters" id="filters" aria-label="Filters">
+        <h2>Filters <button type="button" id="reset">Clear all</button></h2>
+
+        <fieldset class="filter-group">
+          <legend>Type of car</legend>
+          <div class="chips" id="cat-chips"></div>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Fuel</legend>
+          <div class="chips" id="fuel-chips"></div>
+        </fieldset>
+
+        <div class="filter-group">
+          <label for="max-price">Max price per day: <span id="max-price-out"></span></label>
+          <input type="range" id="max-price" min="300" max="4200" step="50">
+        </div>
+
+        <div class="filter-group">
+          <label for="min-seats">Seats</label>
+          <select id="min-seats">
+            <option value="0">Any number</option>
+            <option value="4">4 or more</option>
+            <option value="5">5 or more</option>
+            <option value="7">7 or more</option>
+            <option value="12">12 or more</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="transmission">Gearbox</label>
+          <select id="transmission">
+            <option value="">Manual or automatic</option>
+            <option>Automatic</option>
+            <option>Manual</option>
+          </select>
+        </div>
+
+        <label class="check"><input type="checkbox" id="only-available"> <span>Only show available cars</span></label>
+      </aside>
+
+      <div>
+        <div class="toolbar">
+          <div class="search-box">
+            <label class="sr-only" for="search">Search by name or model</label>
+            <span aria-hidden="true" id="search-icon"></span>
+            <input type="search" id="search" placeholder="Search by name or model, e.g. Corolla" autocomplete="off">
+          </div>
+          <div style="display:flex;gap:.5rem;align-items:center">
+            <button class="btn btn-ghost btn-small filter-toggle" id="filter-toggle" type="button" aria-expanded="false" aria-controls="filters">Filters</button>
+            <label class="sr-only" for="sort">Sort cars</label>
+            <select id="sort" style="width:auto">
+              <option value="popular">Most popular</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="seats">Most seats</option>
+            </select>
+          </div>
+        </div>
+        <p class="result-count" id="count" aria-live="polite"></p>
+        <div class="car-grid" id="results"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

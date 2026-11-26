@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img">
+  <ellipse cx="200" cy="183" rx="176" ry="9" fill="#000" opacity=".16"/>
+  <path d="M30 172 L30 140 Q30 122 54 118 L100 112 L132 76 Q140 68 158 68 L226 68 Q236 68 236 80 L236 120 L370 120 L370 172 Z" fill="#f4f4f2"/>
+  <path d="M30 172 L30 140 Q30 122 54 118 L100 112 L132 76 Q140 68 158 68 L226 68 Q236 68 236 80 L236 120 L370 120 L370 172 Z" fill="url(#g)" opacity=".5"/>
+  <path d="M140 80 Q146 76 160 76 L182 76 L182 112 L108 112 Z M190 76 L222 76 Q228 76 228 84 L228 112 L190 112 Z" fill="#2c3a48"/>
+  <path d="M140 80 Q146 76 160 76 L182 76 L182 112 L108 112 Z M190 76 L222 76 Q228 76 228 84 L228 112 L190 112 Z" fill="#9fc3e0" opacity=".35"/>
+  <rect x="40" y="143" width="320" height="5" fill="#9e9e9d" opacity=".45"/>
+  <rect x="354" y="117" width="12" height="8" rx="3" fill="#e2483d"/>
+  <rect x="34" y="117" width="14" height="9" rx="3" fill="#ffe08a"/>
+  <circle cx="98" cy="151" r="33" fill="#9e9e9d"/>
+  <circle cx="98" cy="151" r="28" fill="#1d2024"/>
+  <circle cx="98" cy="151" r="15.4" fill="#b9bec4"/>
+  <circle cx="98" cy="151" r="5.0" fill="#5b6168"/>
+  <circle cx="300" cy="151" r="33" fill="#9e9e9d"/>
+  <circle cx="300" cy="151" r="28" fill="#1d2024"/>
+  <circle cx="300" cy="151" r="15.4" fill="#b9bec4"/>
+  <circle cx="300" cy="151" r="5.0" fill="#5b6168"/>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7f7f6"/><stop offset=".6" stop-color="#f4f4f2" stop-opacity="0"/></linearGradient></defs>
+</svg>

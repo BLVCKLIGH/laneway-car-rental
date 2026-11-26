@@ -1,0 +1,62 @@
+/* Fleet data. Replace `image` with a real photo path (e.g. assets/cars/polo.jpg) whenever you have one. */
+const CARS = [
+  { id: 1, name: "Volkswagen Polo Vivo", slug: "vw-polo-vivo", category: "Economy", fuel: "Petrol", transmission: "Manual", seats: 5, bags: 2, price: 390, available: true, year: 2024, consumption: "5.9 L/100km",
+    features: ["Air conditioning", "Bluetooth audio", "USB charging", "Power steering"],
+    blurb: "The car most South Africans learned to drive in. Cheap to run, easy to park and happy on a long N1 trip." },
+  { id: 2, name: "Toyota Corolla", slug: "toyota-corolla", category: "Sedan", fuel: "Hybrid", transmission: "Automatic", seats: 5, bags: 3, price: 620, available: true, year: 2025, consumption: "4.3 L/100km",
+    features: ["Hybrid drive", "Apple CarPlay & Android Auto", "Reverse camera", "Lane-keep assist"],
+    blurb: "A quiet, frugal hybrid sedan with a big boot. A good pick for business trips between Joburg and Pretoria." },
+  { id: 3, name: "Suzuki Swift", slug: "suzuki-swift", category: "Economy", fuel: "Petrol", transmission: "Automatic", seats: 5, bags: 2, price: 420, available: false, year: 2024, consumption: "4.9 L/100km",
+    features: ["Automatic gearbox", "Touchscreen radio", "Bluetooth audio", "ABS & airbags"],
+    blurb: "Small, nippy and automatic, so city traffic is less of a chore." },
+  { id: 4, name: "Toyota Fortuner", slug: "toyota-fortuner", category: "SUV", fuel: "Diesel", transmission: "Automatic", seats: 7, bags: 4, price: 1290, available: true, year: 2025, consumption: "7.8 L/100km",
+    features: ["7 seats", "4x4 with low range", "Towbar", "Cruise control"],
+    blurb: "Seven seats, proper ground clearance and a 4x4 system for gravel roads to the Kruger or the Drakensberg." },
+  { id: 5, name: "Hyundai Tucson", slug: "hyundai-tucson", category: "SUV", fuel: "Petrol", transmission: "Automatic", seats: 5, bags: 4, price: 980, available: true, year: 2024, consumption: "8.1 L/100km",
+    features: ["Panoramic sunroof", "Wireless phone charging", "Blind-spot monitor", "Heated seats"],
+    blurb: "A comfortable family SUV with plenty of boot space for a week on the Garden Route." },
+  { id: 6, name: "Ford Ranger", slug: "ford-ranger", category: "Bakkie", fuel: "Diesel", transmission: "Automatic", seats: 5, bags: 5, price: 1150, available: true, year: 2025, consumption: "8.4 L/100km",
+    features: ["Double cab", "Load bin with liner", "4x4", "Towbar"],
+    blurb: "Double-cab bakkie for moving house, carrying bikes or heading off-road." },
+  { id: 7, name: "Toyota Hilux", slug: "toyota-hilux", category: "Bakkie", fuel: "Diesel", transmission: "Manual", seats: 5, bags: 5, price: 1090, available: false, year: 2024, consumption: "8.0 L/100km",
+    features: ["Double cab", "Diff lock", "4x4 with low range", "Load bin with canopy"],
+    blurb: "The bakkie that goes anywhere. Manual gearbox, low range and a canopy to keep your luggage dry." },
+  { id: 8, name: "BMW 3 Series", slug: "bmw-3-series", category: "Luxury", fuel: "Petrol", transmission: "Automatic", seats: 5, bags: 3, price: 1650, available: true, year: 2025, consumption: "6.4 L/100km",
+    features: ["Leather seats", "Navigation", "Adaptive cruise control", "Parking assistant"],
+    blurb: "A sharp-driving executive sedan for client meetings or a weekend in the Winelands." },
+  { id: 9, name: "Mercedes-Benz C-Class", slug: "mercedes-c-class", category: "Luxury", fuel: "Petrol", transmission: "Automatic", seats: 5, bags: 3, price: 1790, available: true, year: 2025, consumption: "6.6 L/100km",
+    features: ["Ambient lighting", "Burmester sound", "Navigation", "Heated leather seats"],
+    blurb: "Calm, refined and very comfortable on the highway. Arrive at the wedding looking the part." },
+  { id: 10, name: "Porsche 718 Cayman", slug: "porsche-718", category: "Sports", fuel: "Petrol", transmission: "Automatic", seats: 2, bags: 1, price: 4200, available: true, year: 2024, consumption: "9.0 L/100km",
+    features: ["Mid-engine layout", "Sport Chrono", "Two luggage compartments", "Launch control"],
+    blurb: "Two seats and Chapman's Peak Drive. That's the whole brief." },
+  { id: 11, name: "Toyota Quantum", slug: "toyota-quantum", category: "Van", fuel: "Diesel", transmission: "Manual", seats: 14, bags: 8, price: 1490, available: true, year: 2024, consumption: "10.2 L/100km",
+    features: ["14 seats", "Rear air conditioning", "Sliding door", "Large luggage area"],
+    blurb: "Moves a whole team, a choir or a very large family in one go." },
+  { id: 12, name: "Volkswagen ID.4", slug: "vw-id4", category: "SUV", fuel: "Electric", transmission: "Automatic", seats: 5, bags: 4, price: 1390, available: true, year: 2025, consumption: "17 kWh/100km",
+    features: ["Up to 520 km range", "Fast charging (DC)", "Heat pump", "Digital cockpit"],
+    blurb: "A fully electric SUV with enough range for Joburg to Durban with one fast-charge stop." },
+  { id: 13, name: "Haval Jolion", slug: "haval-jolion", category: "SUV", fuel: "Petrol", transmission: "Automatic", seats: 5, bags: 3, price: 740, available: true, year: 2025, consumption: "7.3 L/100km",
+    features: ["10.25\" touchscreen", "360° camera", "Wireless charging", "Keyless entry"],
+    blurb: "A well-equipped compact SUV at a hatchback price." },
+  { id: 14, name: "Kia Picanto", slug: "kia-picanto", category: "Economy", fuel: "Petrol", transmission: "Manual", seats: 4, bags: 1, price: 340, available: true, year: 2024, consumption: "5.0 L/100km",
+    features: ["Bluetooth audio", "Air conditioning", "Electric windows", "Very easy to park"],
+    blurb: "Our cheapest car. Ideal for one or two people getting around town." },
+].map(c => ({ ...c, image: `assets/cars/${c.slug}.svg` }));
+
+const LOCATIONS = [
+  { id: "jnb", name: "O.R. Tambo Airport, Johannesburg", short: "O.R. Tambo Airport", hours: "Open 24 hours" },
+  { id: "sandton", name: "Sandton City, Johannesburg", short: "Sandton City", hours: "Mon–Sat 07:00–19:00" },
+  { id: "cpt", name: "Cape Town International Airport", short: "Cape Town Airport", hours: "Open 24 hours" },
+  { id: "waterfront", name: "V&A Waterfront, Cape Town", short: "V&A Waterfront", hours: "Daily 08:00–18:00" },
+  { id: "dur", name: "King Shaka Airport, Durban", short: "King Shaka Airport", hours: "Daily 05:00–23:00" },
+];
+
+const EXTRAS = [
+  { id: "gps", name: "GPS navigator", price: 60, per: "day" },
+  { id: "child", name: "Child seat", price: 75, per: "day" },
+  { id: "driver", name: "Additional driver", price: 90, per: "day" },
+  { id: "cover", name: "Super cover (no excess)", price: 180, per: "day" },
+];
+
+const CATEGORIES = ["Economy", "Sedan", "SUV", "Bakkie", "Luxury", "Sports", "Van"];

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car details | Laneway Car Hire</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/car.js" defer></script>
+</head>
+<body data-page="cars">
+  <div id="site-header"></div>
+  <main id="main">
+    <div class="page-head">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="cars.html">Our cars</a> / <span id="crumb"></span></nav>
+        <h1 id="car-name">Car details</h1>
+        <p id="car-sub"></p>
+      </div>
+    </div>
+    <div class="wrap" id="detail-root"></div>
+    <section class="band" aria-labelledby="similar-title">
+      <div class="wrap">
+        <h2 id="similar-title">Similar cars</h2>
+        <div class="car-grid" id="similar"></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | Laneway Car Hire</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/login.js" defer></script>
+</head>
+<body data-page="login">
+  <div id="site-header"></div>
+  <main id="main" class="auth">
+    <div class="auth-art">
+      <h1>Your bookings, details and receipts in one place.</h1>
+      <p>Sign in to fill in booking forms faster and keep track of every trip.</p>
+    </div>
+    <div class="auth-form">
+      <div id="auth-root">
+        <div class="tabs" role="tablist">
+          <button role="tab" id="tab-login" aria-selected="true" aria-controls="login-form">Sign in</button>
+          <button role="tab" id="tab-signup" aria-selected="false" aria-controls="signup-form">Create account</button>
+        </div>
+
+        <form id="login-form" role="tabpanel" aria-labelledby="tab-login" novalidate>
+          <div class="field"><label for="li-email">Email</label><input type="email" id="li-email" autocomplete="email"><span class="error"></span></div>
+          <div class="field"><label for="li-pass">Password</label><input type="password" id="li-pass" autocomplete="current-password"><span class="error"></span></div>
+          <button class="btn btn-dark btn-block" type="submit">Sign in</button>
+        </form>
+
+        <form id="signup-form" role="tabpanel" aria-labelledby="tab-signup" hidden novalidate>
+          <div class="field"><label for="su-name">Full name</label><input type="text" id="su-name" autocomplete="name"><span class="error"></span></div>
+          <div class="field"><label for="su-email">Email</label><input type="email" id="su-email" autocomplete="email"><span class="error"></span></div>
+          <div class="field"><label for="su-pass">Password</label><input type="password" id="su-pass" autocomplete="new-password"><span class="hint">At least 8 characters, including a number.</span><span class="error"></span></div>
+          <button class="btn btn-dark btn-block" type="submit">Create account</button>
+        </form>
+        <p class="muted" style="font-size:.88rem;margin-top:1.5rem">This is a front-end demo. Accounts are stored only in this browser and passwords are never saved.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
